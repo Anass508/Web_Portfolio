@@ -300,3 +300,71 @@ nav ul li a:hover::after {
 }
 
 /*------------------------  Contact section  ------------------------*/
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p svg {
+    color: #ff004f ;
+    margin-right: 15px ;
+    font-size: 25px ;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none ; /* enlever le soulignage */
+    font-size: 30px ;
+    margin-right: 15px ;
+    color: #ababab ;
+    display: inline-block ; /* Pour les mettre sur la meme ligne */
+    transition: transform 0.5s;
+}
+
+.social-icons a :hover {
+    color: #ff004f;
+    transform: translateY(-5px) ; /* pour faire l'effet ou dès qu'on pass la souris sa monte un peu */
+}
+
+.btn.btn_download {
+    display: inline-block;
+    background: #ff004f;
+    
+}
+.copyright {
+    width: 100%;
+    text-align: center ;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/*------------------------  CSS for small screen_responsive  ------------------------*/
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(vrai-asset/phone-background.png);
+    }
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+}
