@@ -1,0 +1,302 @@
+/* CSS Reset */
+* {
+    margin : 0 ;
+    padding : 0 ;
+    font-family: 'Poppins', sans-serif; /* meme police d'écriture sur tout la page */
+    box-sizing: border-box; /* évite les débordements non voulus */
+}
+
+
+body {
+    background: #080808; /* Plus rapide que background-colors */
+    color: #fff; /* couleur du texte */
+}
+
+#header { 
+    width: 100% ; /* prend la taille de tout l'écran */
+    height: 100vh ; /* l'image prend tout son écran en hauteur dès son arrivée */
+    background-image: url(img/singe-serein.png) ; /* image en background de la page */
+    background-size: cover ; /* couvre l'image de sur l'écran a 100% */
+    background-position: center ;
+    background-attachment: fixed ; /* Pour que l'image reste dans le back quand je défile, #effet_styler*/
+}
+
+.container {
+    padding: 10px 10% ;
+}
+
+nav {
+    display: flex ; /* côte à côte sur la même ligne au lieu d'empiler par defaut*/
+    align-items: center ; /* aligne le texte et le logo */
+    justify-content: space-between ; /* pour qu'il ne soit pas coller - logo et texte */
+    flex-wrap: wrap ; /* autorise le texte passe a la ligne au lieu de disparaitre sur petit écran */
+}
+
+.logo {
+    width: 75px ;  /* la taille du logo */
+}
+
+nav ul li {
+    display: inline-block ; /* Pour les mettre sur la meme ligne */
+    list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
+    margin: 10px 20px ; /* espace entre les options */
+}
+
+nav ul li a {
+    color: #fff ;
+    text-decoration: none ; /* Pour enlever le soulignage des options */
+    font-size: 18px; /* Taille de police d'écriture */
+    position: relative; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+}
+
+/* ::after , sert de pseudo-élément en CSS , permet de faire des élément sans crée de balise spécifique pour chaque options */
+/* Sinon il aurait fallu faire <span class="barre"></span> pour chaque options pour rajouter l'effet de barre en dessous de l'option */
+
+nav ul li a::after { 
+    content: '' ; /* Obligatoire : Sans cette ligne, le ::after n'apparaîtra pas à l'écran */
+    width: 0 ; /* Pour appliquer sur le texte , ici a 0 il est cacher tant que l'on n'a pas mis le curseur dessus   */
+    height: 3px ;
+    background: #ff004f ;
+    position: absolute ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    left: 0 ; /* Pour que la barre commence au debut du mot sans décalage */
+    bottom: -6px ; /* Pour que l'effet commencer un peu plus bas du texte*/
+    transition: 0.5s; 
+}
+
+/* :hover , Pour appliquer l'effet ::after quand l'on passe sa souris dessus */
+nav ul li a:hover::after { 
+    width: 100% ; /* Pour l'afficher */
+}
+
+.header-text {
+    margin-top: 20% ; /* Espacement sur le haut */
+    font-size: 30px ; /* Taille de police d'écriture */
+}
+
+.header-text h1 {
+    font-size: 60px ;
+    margin-top: 20px ;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+    margin-left: 10% ; /*Rajouter l'espacement sur la gauche */
+}
+
+/*------------------------  about section  ------------------------*/
+
+#about {
+    padding: 80px 0 ;
+    color: #ababab;
+}
+
+.row {
+    display: flex ; /* côte à côte sur la même ligne au lieu d'empiler par defaut */
+    justify-content: space-between ; /* pour qu'il ne soit pas coller - image et texte (about Me) */
+    flex-wrap: wrap ; /* autorise le texte passe a la ligne au lieu de disparaitre sur petit écran */
+}
+
+.about-col-1 {
+    flex-basis: 35% ; /* Prend 35% de l'espace de la taille du parent , en gros je défini un espace seulement pour lui de 35% */
+}
+
+.about-col-1 img {
+    width: 100% ; /* l'image prendre 100% des 35% attribuer plus haut */
+    border-radius: 15px ; /* arrondire les bords */
+}
+
+
+.about-col-2 {
+    flex-basis: 60% ; /* Prend 60% de l'espace de la taille du parent ,ps: on avait deja def 35% pour about-col-1 ,
+                        les 5% restant sont entre les deux col pour pas qu'il soit coller  */
+}
+
+.sub-title {
+    font-size: 60px ;  /* Taille de police d'écriture */
+    font-weight: 600 ; /* l'épaisseur de la police : le gras */
+    color: #fff ;
+}
+
+.tab-titles {
+    display: flex ; /* côte à côte sur la même ligne au lieu d'empiler par defaut*/
+    margin: 20px 0 40px ;
+}
+
+.tab-links {
+    margin-right: 50px ; /* Pour qu'il soit tout décaller au lieu d'etre coller  */
+    font-size: 18px ; /* Taille de police d'écriture */
+    font-weight: 500 ;  /* l'épaisseur de la police : le gras */
+    cursor: pointer ; /* change d'animation pour etre cliquable */
+    position: relative ; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+}
+
+.tab-links::after {
+    content: '' ; /* Obligatoire : Sans cette ligne, le ::after n'apparaîtra pas à l'écran */
+    width: 0 ; /* Pour appliquer sur le texte , ici a 0 il est cacher tant que l'on n'a pas mis le curseur dessus   */
+    height: 3px ;
+    background: #ff004f ;
+    position: absolute ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    left: 0 ; /* Pour que la barre commence au debut du mot sans décalage */
+    bottom: -8px ; /* Pour que l'effet commencer un peu plus bas du texte*/
+    transition: 0.5s; 
+}
+
+.tab-links.active-link::after {
+   width: 100% ; /* Pour l'afficher */
+}
+
+.tab-contents ul li {
+    list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
+    margin: 10px 0 ; /* espace entre les options */
+}   
+
+.tab-contents ul li span {
+    color: #b54769 ;
+    font-size: 14px ;
+}
+
+.tab-contents {
+    display: none ; /* Pour faire disparaitre ,ne s'affiche pas */
+}
+
+.tab-contents.active-tab {
+    display: block ; /* Pour afficher le tab actif */
+}
+
+/*------------------------  Services section  ------------------------*/
+
+
+#services {
+    padding: 30px 0 ;
+}
+
+.services-list {
+    display: grid ; /* crée une mise en page collonnes et ligne , 2d*/
+    grid-template-columns: repeat( auto-fit , minmax(250px , 1fr) ) ; /* crée case avec un largeur de 250px mais pourra prendre tout si il reste de l'espace (1fr) , auto-fit pour mettre  un nb de case par rapport a la taille de l'écran*/
+    grid-gap: 40px ; /* espace de 40px entre chaque cases */
+    margin-top: 50px ;
+}
+
+.services-list div {
+    background: #262626 ;
+    padding: 40px ;
+    font-size: 13px ; /* Taille de police d'écriture */
+    font-weight: 300 ; /* l'épaisseur de la police : le gras */
+    border-radius: 10px ;
+    transition: background 0.5s, transforme 0.5s ;
+}
+
+.services-list div svg { /* Pas mettre i mais svg pour les icon sinon marche pas */
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px ; /* Taille de police d'écriture */
+    font-weight: 500 ; /* l'épaisseur de la police : le gras */
+    margin-bottom: 15px ;
+}
+
+.services-list div a {
+    color: #fff ;
+    text-decoration: none ; /* Pour enlever le soulignage des options */
+    font-size: 12px ; /* Taille de police d'écriture */
+    margin-top: 20px ;
+    display: inline-block; /* Pour les mettre sur la meme ligne */
+}
+
+.services-list div:hover {
+    background: #ff004f ;
+    transform: translateY(-10px) ; /* pour faire l'effet ou dès qu'on pass la souris sa monte un peu */
+}
+
+/*------------------------  Portfolio section  ------------------------*/
+
+#portfolio {
+    padding: 50px 0 ; 
+}
+
+.work-list {
+    display: grid ; /* crée une mise en page collonnes et ligne , 2d*/
+    grid-template-columns: repeat( auto-fit , minmax(250px , 1fr) ) ; /* crée case avec un largeur de 250px mais pourra prendre tout si il reste de l'espace (1fr) , auto-fit pour mettre  un nb de case par rapport a la taille de l'écran*/
+    grid-gap: 40px ; /* espace de 40px entre chaque cases */
+    margin-top: 50px ;
+}
+
+.work {
+    border-radius: 10px ;
+    position: relative; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+    overflow: hidden ; /* masque tout ce qui dépasse de la case crée dans .work-list */
+}
+
+.work img {
+    width: 100% ; /* pour voir l'image en entière */
+    border-radius: 10px ;
+    display: block ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    transition: transform 0.5s; /* Pour faire un effet de zoom sur l'image */
+}
+
+
+.layer {
+    width: 100% ;
+    height: 0 ; /* Masqué par défaut */
+    background: linear-gradient( rgba(0,0,0,0.6), #ff004f ) ; /* noir avec 60% d'oppacité */
+    border-radius: 10px ;
+    position: absolute ; /* Pour pouvoir le bouger */
+    left: 0;
+    bottom: 0;
+    overflow: hidden; /* masque tout ce qui dépasse de la case crée */
+    display: flex; /* active flexbox et donc tout les enfant vont suivre les regle flexbox plutot que celle de HTML*/
+    align-items: center; /* aligner par rapport au centre */
+    justify-content: center ; /* aligner le contenu au milieu en prenant aussi le haut et bas */   
+    flex-direction: column ; /* aligne les élément les une en desous des autre , en colonne */
+    padding: 0 40px;
+    text-align: center ;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+
+.layer h3 {
+    font-weight: 700 ; /* l'épaisseur de la police : le gras */
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px ;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px; /* emt de l'espace entre chaque ligne d'un texte , pour qu'il soit aérer*/
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* 50% cela deviens un cercle */
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1); /* Pour faire un effet de zoom sur l'image */
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn { 
+    display: block ; /* Pour qu'il puissent bouger */
+    margin: 50px auto ;
+    width: fit-content ; /* s'adapte a la taile de son contenue , va le placer au milieu */ 
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none ; /* enlever le soulignage */
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+/*------------------------  Contact section  ------------------------*/
