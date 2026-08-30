@@ -353,6 +353,10 @@ nav ul li a:hover::after {
 
 /*------------------------  CSS for small screen_responsive  ------------------------*/
 
+nav .svg-inline--fa {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     #header {
         background-image: url(vrai-asset/phone-background.png);
@@ -366,5 +370,32 @@ nav ul li a:hover::after {
     .header-text h1 {
         font-size: 30px;
     }
+    
+    nav .svg-inline--fa {
+        display: block;
+        font-size: 25px;
+    }
 
+    nav ul {
+        background: #ff004f;
+        position: fixed; /* reste toujours au meme endroit */
+        top: 0 ;
+        right: -200px ; /* Pour cacher la barre par défaut */
+        width: 200px; /* prend la taille de l'écran */
+        height: 100vh; /* l'image prend tout son écran en hauteur dès son arrivée */
+        padding-top: 50px;
+        z-index: 2; /* Cela l'ordre d'empilement sur l'axe Z : en gros par défaut elle est en arrière plan */
+    }
+
+    nav ul li {
+        display: block ;
+        margin: 25px;
+    }
+
+    nav ul .svg-inline--fa {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
