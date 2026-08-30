@@ -25,3 +25,13 @@ for ( let i=0 ; i < tab_links.length ; i++ ) {
    }); 
 
 }
+
+
+
+/*clique sur le burger menu pour petit écran*/
+
+
+document.querySelector(".fa-bars").addEventListener('click',function (){
+    console.log("click");
+    document.querySelector("nav ul").style.right="0px";
+});
