@@ -1,5 +1,5 @@
-console.log("hello console");
 
+/*----------------------   -----------------------*/
 
 /* [0] car getElementsByClassName renvoie pas un élément mais une liste. */
 let tab_links = document.getElementsByClassName('tab-titles')[0].querySelectorAll('p') ;
@@ -27,11 +27,14 @@ for ( let i=0 ; i < tab_links.length ; i++ ) {
 }
 
 
+/*--------------------   -------------------------*/
 
-/*clique sur le burger menu pour petit écran*/
+/* Clique sur le burger menu pour petit écran */
 
-
-document.querySelector(".fa-bars").addEventListener('click',function (){
-    console.log("click");
+document.getElementById("open-menu").addEventListener('click',function (){
     document.querySelector("nav ul").style.right="0px";
+});
+
+document.getElementById("close-menu").addEventListener('click',function (){
+    document.querySelector("nav ul").style.right="-200px";
 });
