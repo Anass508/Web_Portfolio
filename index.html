@@ -25,10 +25,14 @@
                     <li> <a href="#"> Services </a> </li>
                     <li> <a href="#"> Portfolio </a> </li>
                     <li> <a href="#"> Contact </a> </li> 
-                    <i class="fa-solid fa-xmark"></i> <!-- close icon for menu navbar -->
-                </ul>
+                    <button id="close-menu" class="img_casse_pied">
+                        <i class="fa-solid fa-xmark"></i> <!-- close icon for menu navbar -->
+                    </button>
+                </ul> 
 
-                <i class="fa-solid fa-bars"></i> <!-- burger icon for menu navbar -->
+                <button id="open-menu" class="img_casse_pied"> <!-- encapsuler dans un button car problème avec js lors des écouteur addEventListener , + class pour faire cela sur autre img bug de fontawesome -->
+                    <i class="fa-solid fa-bars"></i> <!-- burger icon for menu navbar -->
+                </button>
 
             </nav>
 
