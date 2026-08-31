@@ -83,6 +83,15 @@ nav ul li a:hover::after {
     margin-left: 10% ; /*Rajouter l'espacement sur la gauche */
 }
 
+.img_casse_pied {
+    background: transparent ;
+    border: none ; 
+    color: inherit; /* sinon fait disparait le svg*/
+    cursor: pointer; 
+    outline: none; /* Pour enlever le contoure lorsque l"on selection l"élément */
+    padding:0;
+}
+
 /*------------------------  about section  ------------------------*/
 
 #about {
