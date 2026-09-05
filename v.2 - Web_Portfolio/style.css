@@ -1,0 +1,16 @@
+/* CSS Reset */
+* {
+    margin : 0 ;
+    padding : 0 ;
+    font-family: 'Poppins', sans-serif; /* meme police d'écriture sur tout la page */
+    box-sizing: border-box; /* évite les débordements non voulus */
+}
+
+html {
+    scroll-behavior: smooth; /* Pour que les animation lors de clique sur la navbar sous plus smooth */
+}
+
+body {
+    background: #080808; /* Plus rapide que background-colors */
+    color: #fff; /* couleur du texte */
+}
