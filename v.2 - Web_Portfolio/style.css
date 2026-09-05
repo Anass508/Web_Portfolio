@@ -1,3 +1,6 @@
+/*couleur : https://www.realtimecolors.com/?colors=0d0c08-fcfbf8-ebe6d7-e6d192-e8c45b&fonts=Inter-Inter */
+
+
 /* CSS Reset */
 * {
     margin : 0 ;
@@ -11,8 +14,8 @@ html {
 }
 
 body {
-    background: #f7f5f5d2; /* Plus rapide que background-colors */
-    color: #080808b6; /* couleur du texte */
+    background: #fcfbf8; 
+    color: #0d0c08; /* couleur du texte */
 }
 
 /*------------------------  Header section  ------------------------*/
@@ -30,6 +33,10 @@ body {
     grid-column-end: 2 ;
     grid-row-start: 1 ;
     grid-row-end: 2 ;
+    border-right: solid;
+
+    position: relative; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+    overflow: hidden ; /* masque tout ce qui dépasse de la case */
 }
 
 .item2 {
@@ -44,6 +51,7 @@ body {
     grid-column-end: 4 ;
     grid-row-start: 1 ;
     grid-row-end: 2 ;
+    border-left: solid;
 }
 
 .item4 {
@@ -51,6 +59,8 @@ body {
     grid-column-end: 2 ;
     grid-row-start: 2 ;
     grid-row-end: 4 ;
+    border-right: solid;
+    border-top: solid;
 }
 
 .item5 {
@@ -58,6 +68,7 @@ body {
     grid-column-end: 3 ;
     grid-row-start: 2 ;
     grid-row-end: 4 ;
+    border-top: solid;
 }
 
 .item6 {
@@ -65,7 +76,25 @@ body {
     grid-column-end: 4 ;
     grid-row-start: 2 ;
     grid-row-end: 4 ;
+    border-top: solid;
+    border-left: solid;
 }
 
+.item {
+    border-color: #e8c45b ;
+    border-width: 0.20cap ;
+}
+
+.logo {
+    display: block ;
+    width: 100% ; /* Pour qu'on puissent la voir en entier*/
+    transform: scale(2); /* Pour que l'image sois plus zoomer et plus grand */
+}
+
+.item1 p {
+    text-align: center ; /* aligne le texte et le logo */
+    font-size: 20px;
+    font-weight: 700;
+}
 
 /*------------------------   section  ------------------------*/
