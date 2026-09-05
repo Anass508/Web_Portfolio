@@ -11,6 +11,61 @@ html {
 }
 
 body {
-    background: #080808; /* Plus rapide que background-colors */
-    color: #fff; /* couleur du texte */
+    background: #f7f5f5d2; /* Plus rapide que background-colors */
+    color: #080808b6; /* couleur du texte */
 }
+
+/*------------------------  Header section  ------------------------*/
+
+.gride-line {
+    display: grid; /* Pour dire que c'est une grille */
+    grid-template-columns: 10% 80% 10% ; /* Taille de la grille horizontale */
+    grid-template-rows: 20% 80% ; /* Taille de la grille verticale */
+    min-height: 100vh; /* hauteur égale a la fenetre */
+    width: 100%; /* Prendre tout de la fenetre */
+}
+
+.item1 {
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    grid-row-start: 1 ;
+    grid-row-end: 2 ;
+}
+
+.item2 {
+    grid-column-start: 2 ;
+    grid-column-end: 3 ;
+    grid-row-start: 1 ;
+    grid-row-end: 2 ;
+}
+
+.item3 {
+    grid-column-start: 3 ;
+    grid-column-end: 4 ;
+    grid-row-start: 1 ;
+    grid-row-end: 2 ;
+}
+
+.item4 {
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    grid-row-start: 2 ;
+    grid-row-end: 4 ;
+}
+
+.item5 {
+    grid-column-start: 2 ;
+    grid-column-end: 3 ;
+    grid-row-start: 2 ;
+    grid-row-end: 4 ;
+}
+
+.item6 {
+    grid-column-start: 3 ;
+    grid-column-end: 4 ;
+    grid-row-start: 2 ;
+    grid-row-end: 4 ;
+}
+
+
+/*------------------------   section  ------------------------*/
