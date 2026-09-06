@@ -19,6 +19,14 @@ body {
 
 }
 
+.parisienne-regular { /* Typographie */
+  font-family: "Parisienne", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #0d0c08;
+}
+
+
 /*------------------------  Header section  ------------------------*/
 
 .gride-line {
@@ -201,6 +209,12 @@ body {
 }
 
 
+/*---- Principale_gride_5 ----*/
+
+.title-header {
+    font-size: 300px;
+    text-align: center;
+}
 
 
 /*------------------------   section  ------------------------*/
