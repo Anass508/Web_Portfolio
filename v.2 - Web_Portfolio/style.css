@@ -19,11 +19,19 @@ body {
 
 }
 
-.parisienne-regular { /* Typographie */
+    /* Typographie */   
+.parisienne-regular { 
   font-family: "Parisienne", cursive;
   font-weight: 400;
   font-style: normal;
   color: #0d0c08;
+}
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 
@@ -211,10 +219,45 @@ body {
 
 /*---- Principale_gride_5 ----*/
 
-.title-header {
-    font-size: 300px;
-    text-align: center;
+.title-header_1 {
+    font-size: 100px;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-top: 50px;
 }
+
+.title-header_2 {
+    font-size: 100px;
+    position: absolute;
+    left: 18% ;
+    top: 27%;
+}
+
+.item5 h2 {
+    font-size: 60px;
+    font-weight: 400;
+    position: absolute;
+    top: 49% ;
+    left: 57% ;
+}
+
+.item5 .paragraph_item5_1 {
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    top: 74% ;
+    left: 30% ;
+}
+
+.item5 .paragraph_item5_2 {
+    font-size: 20px;
+    font-weight: 400;
+    position: absolute;
+    top: 77% ;
+    left: 42% ;
+}
+
+
 
 
 /*------------------------   section  ------------------------*/
