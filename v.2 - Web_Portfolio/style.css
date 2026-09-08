@@ -59,8 +59,6 @@ body {
     grid-column-end: 3 ;
     grid-row-start: 1 ;
     grid-row-end: 2 ;
-
-    
 }
 
 .item3 {
@@ -78,7 +76,7 @@ body {
     grid-row-end: 4 ;
     border-right: solid;
     border-top: solid;
-    
+    border-bottom: solid;
 }
 
 .item5 {
@@ -87,6 +85,7 @@ body {
     grid-row-start: 2 ;
     grid-row-end: 4 ;
     border-top: solid;
+    border-bottom: solid;
 }
 
 .item6 {
@@ -96,6 +95,7 @@ body {
     grid-row-end: 4 ;
     border-top: solid;
     border-left: solid;
+    border-bottom: solid;
 }
 
 .item {
@@ -238,7 +238,7 @@ body {
     font-weight: 400;
     position: absolute;
     top: 49% ;
-    left: 57% ;
+    left: 55% ;
 }
 
 .item5 .paragraph_item5_1 {
@@ -258,6 +258,125 @@ body {
 }
 
 
+/*---- Navbar-menu_gride_2  ----*/
+
+.navbar {
+    background: #fcfbf8; 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    cursor: pointer;
+    width: 500px ;
+    height: 60px ;
+    border-radius: 25px;
+    box-shadow: 6px 6px 12px #e8c45b,
+                -6px -6px 12px #e6d192;
+}
 
 
-/*------------------------   section  ------------------------*/
+/*------------------------  Portfolio section  ------------------------*/
+
+#Projets {
+    padding: 50px 0 ; 
+}
+
+.sub-title {
+    font-size: 100px;
+    margin-left: 35%;
+}
+
+
+.work-list {
+    display: grid ; /* crée une mise en page collonnes et ligne , 2d*/
+    grid-template-columns: repeat( 3, 350px ) ; /* crée case avec un largeur de 250px mais pourra prendre tout si il reste de l'espace (1fr) , auto-fit pour mettre  un nb de case par rapport a la taille de l'écran*/
+    grid-auto-rows: 380px;
+    grid-gap: 40px ; /* espace de 40px entre chaque cases */
+    margin-top: 50px ;
+    margin-left: 20%;
+}
+
+
+
+.work {
+    border-radius: 10px ;
+    position: relative; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+    overflow: hidden ; /* masque tout ce qui dépasse de la case crée dans .work-list */
+}
+
+.work img {
+    width: 100% ; /* pour voir l'image en entière */
+    border-radius: 10px ;
+    display: block ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    transition: transform 0.5s; /* Pour faire un effet de zoom sur l'image */
+}
+
+
+.layer {
+    width: 100% ;
+    height: 0 ; /* Masqué par défaut */
+    background: linear-gradient( rgba(238, 234, 173, 0.801), #e8c45b ) ; /* noir avec 60% d'oppacité */
+    border-radius: 10px ;
+    position: absolute ; /* Pour pouvoir le bouger */
+    left: 0;
+    bottom: 0;
+    overflow: hidden; /* masque tout ce qui dépasse de la case crée */
+    display: flex; /* active flexbox et donc tout les enfant vont suivre les regle flexbox plutot que celle de HTML*/
+    align-items: center; /* aligner par rapport au centre */
+    justify-content: center ; /* aligner le contenu au milieu en prenant aussi le haut et bas */   
+    flex-direction: column ; /* aligne les élément les une en desous des autre , en colonne */
+    padding: 0 40px;
+    text-align: center ;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+
+.layer h3 {
+    font-weight: 700 ; /* l'épaisseur de la police : le gras */
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px ;
+    color: #e8c45b;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px; /* emt de l'espace entre chaque ligne d'un texte , pour qu'il soit aérer*/
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* 50% cela deviens un cercle */
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1); /* Pour faire un effet de zoom sur l'image */
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn { 
+    background: #fcfbf8; 
+    margin-left: 50%;
+    margin-top: 4% ;
+    padding-top: 17px;
+    text-align: center;
+    font-size: 20px;
+    transform: translate(-50%, -50%) ;
+    cursor: pointer;
+    width: 200px ;
+    height: 60px ;
+    border-radius: 25px;
+    box-shadow: 6px 6px 12px #e8c45b,-6px -6px 12px #e6d192;
+    text-decoration: none ; /* enlever le soulignage */
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #e8c45b;
+}
+
+/*------------------------   _section  ------------------------*/
