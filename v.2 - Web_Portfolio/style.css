@@ -379,13 +379,158 @@ body {
     background: #e8c45b;
 }
 
-/*------------------------  about Me section  ------------------------*/
+/*------------------------  about Me section  ------------------------*/ 
 
 #about {
     padding: 80px 0 ;
+    margin-left: 70px;
 }
 
+/*------ about Me col1 -------*/
 
-/*------------------------   section  ------------------------*/
+.presentation {
+    background: #fcfbf8; 
+    position: absolute;
+    left: 50%;
+    margin-top: 400px;
+    transform: translate(-50%, -50%) ;
+    cursor: pointer;
+    width: 1100px ;
+    height: 600px ;
+    border-radius: 25px;
+    box-shadow: 6px 6px 12px #e8c45b,
+                -6px -6px 12px #e6d192;
+    z-index: 0;
+}
+
+.about-ligne-1 p {
+    padding: 80px 50px ;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*------ about Me col2 -------*/
+
+.about-ligne-2 {
+    margin-top: 40%;
+    margin-left: 40%;
+}
+
+.tab-titles {
+    display: flex ; /* côte à côte sur la même ligne au lieu d'empiler par defaut*/
+    
+}
+
+.tab-links {
+    left: 0%;
+    margin-right: 100px ; /* Pour qu'il soit tout décaller au lieu d'etre coller  */
+    font-size: 25px ; /* Taille de police d'écriture */
+    font-weight: 500 ;  /* l'épaisseur de la police : le gras */
+    cursor: pointer ; /* change d'animation pour etre cliquable */
+    position: relative ; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+}
+
+.tab-links::after {
+    content: '' ; /* Obligatoire : Sans cette ligne, le ::after n'apparaîtra pas à l'écran */
+    width: 0 ; /* Pour appliquer sur le texte , ici a 0 il est cacher tant que l'on n'a pas mis le curseur dessus   */
+    height: 3px ;
+    background: #e8c45b;
+    position: absolute ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    left: 0 ; /* Pour que la barre commence au debut du mot sans décalage */
+    bottom: -8px ; /* Pour que l'effet commencer un peu plus bas du texte*/
+    transition: 0.5s; 
+}
+
+.tab-links.active-link::after {
+    width: 100% ; /* Pour l'afficher */
+}
+
+.tab-contents ul li {
+    list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
+    margin: 30px 0 ; /* espace entre les options */
+}   
+
+.tab-contents ul li span {
+    color: #e8c45b ;
+    font-size: 15px ;
+    font-weight: 600;
+}
+
+.tab-contents {
+    display: none ; /* Pour faire disparaitre ,ne s'affiche pas */
+}
+
+.tab-contents.active-tab {
+    display: block ; /* Pour afficher le tab actif */
+}
+
+/*------------------------ about the Site section  ------------------------*/
 
 
+#about_WebSite {
+    padding: 30px 0;
+    background: #e6d194;
+}
+
+.sub-title3 {
+    font-size: 100px;
+    margin-left: 32%;
+}
+
+.color_site {
+    margin: 80px;
+}
+
+.palette-color {
+    margin: 0px 400px;
+}
+
+.palette-color li {
+    /*list-style: none ;*/
+    display: inline-block ; 
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.palette-color li p {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.btn-color {
+    background: #080707;
+    transform: translate(-50%, -50%) ;
+    cursor: pointer;
+    width: 120px ;
+    height: 120px ;
+    border-radius: 50%;
+    box-shadow: 6px 6px 12px #d8d6ce,
+                -6px -6px 12px #e2e1de;
+}
+
+.f1 {
+    background: #0d0c08;
+    color: #d8d6ce; 
+}
+
+.f2 {
+    background: #fcfbf8;
+}
+
+.f3 {
+    background: #ebe6d7;
+}
+
+.f4 {
+    background: #e6d192;
+}
+
+.f5 {
+    background: #e8c45b;
+}
+
+.typographie {
+    margin: 80px;
+}
