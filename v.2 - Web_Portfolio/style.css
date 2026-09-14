@@ -252,7 +252,7 @@ body {
 .item5 .paragraph_item5_2 {
     font-size: 20px;
     font-weight: 400;
-    position: absolute;
+    position: absolute; 
     top: 77% ;
     left: 42% ;
 }
@@ -533,4 +533,44 @@ body {
 
 .typographie {
     margin: 80px;
+}
+
+
+/*------------------------  Contact section  ------------------------*/
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left svg {
+    color: #e8c45b ;
+    margin-right: 15px ;
+    font-size: 25px ;
+    text-decoration: none;
+}
+
+.btn.btn_download {
+    display: inline-block;
+    background: #e8c45b;
+    
+}
+.footer {
+    width: 100%;
+    text-align: center ;
+    padding: 25px 0;
+    background: #e6d192;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+.links-contact {
+    text-align: center;
+}
+
+.links-contact p {
+  display: flex;
+  align-items: center; 
+  margin-left: 45% ;
+  text-decoration: none;
 }
