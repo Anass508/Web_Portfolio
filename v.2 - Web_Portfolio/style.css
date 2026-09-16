@@ -14,7 +14,8 @@ html {
 }
 
 body {
-    background: #fcfbf8; 
+    background: #fcfbf8;
+    font-family: "Plus Jakarta Sans", sans-serif; 
     color: #0d0c08; /* couleur du texte */
 
 }
@@ -272,6 +273,38 @@ body {
     border-radius: 25px;
     box-shadow: 6px 6px 12px #e8c45b,
                 -6px -6px 12px #e6d192;
+}
+
+nav ul li {
+    display: inline-block ; /* Pour les mettre sur la meme ligne */
+    list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
+    margin: 10px 20px ; /* espace entre les options */
+}
+
+nav ul li a {
+    color: #c71515 ;
+    text-decoration: none ; /* Pour enlever le soulignage des options */
+    font-size: 18px; /* Taille de police d'écriture */
+    position: relative; /* Pour le déplacer par rapport a sa position initiale + devient un parent */
+}
+
+/* ::after , sert de pseudo-élément en CSS , permet de faire des élément sans crée de balise spécifique pour chaque options */
+/* Sinon il aurait fallu faire <span class="barre"></span> pour chaque options pour rajouter l'effet de barre en dessous de l'option */
+
+nav ul li a::after { 
+    content: '' ; /* Obligatoire : Sans cette ligne, le ::after n'apparaîtra pas à l'écran */
+    width: 0 ; /* Pour appliquer sur le texte , ici a 0 il est cacher tant que l'on n'a pas mis le curseur dessus   */
+    height: 3px ;
+    background: #ff004f ;
+    position: absolute ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    left: 0 ; /* Pour que la barre commence au debut du mot sans décalage */
+    bottom: -6px ; /* Pour que l'effet commencer un peu plus bas du texte*/
+    transition: 0.5s; 
+}
+
+/* :hover , Pour appliquer l'effet ::after quand l'on passe sa souris dessus */
+nav ul li a:hover::after { 
+    width: 100% ; /* Pour l'afficher */
 }
 
 
