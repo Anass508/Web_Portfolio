@@ -1,5 +1,6 @@
-console.log("ok");
+lucide.createIcons(); /* Pour ma bibliothèque Icon */
 
+/*---------------------- fonction burger_menu  -----------------------*/
 
 /* Animation du burger-menu */
 
@@ -8,6 +9,36 @@ let btn=document.querySelector('.btn-menu');
 btn.addEventListener('click', function (){
     btn.classList.toggle('active'); /* toggle sert  a ajouter ou enlever la class active lorque que l'on clique dessus */
 });
+
+/* Options du burger-menu */
+
+let btn_opt = document.getElementsByClassName("btn-menu")[0] ; 
+let opt=document.getElementsByClassName("btn_option")[0];
+
+btn_opt.addEventListener('click', function (){
+
+    if ( btn_opt.style.top != "10%"){
+        btn_opt.style.top="10%";
+        btn_opt.style.transition="0.5s";
+    }
+    else{
+        btn_opt.style.top="40%";
+        btn_opt.style.transition="0.5s";
+    }
+    
+    if (opt.classList.contains("btn_option_desactive") ) {
+        opt.classList.remove("btn_option_desactive");
+        opt.classList.add("btn_option_active");
+    }
+    else if ( opt.classList.contains("btn_option_active") ) {
+        opt.classList.remove("btn_option_active");
+        opt.classList.add("btn_option_desactive");
+    }
+    
+});
+
+
+
 
 /*----------------------   -----------------------*/
 
@@ -35,3 +66,4 @@ for ( let i=0 ; i < tab_links.length ; i++ ) {
    }); 
 
 }
+
