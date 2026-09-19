@@ -187,6 +187,14 @@ body {
     box-shadow: 6px 6px 12px #e8c45b,
                 -6px -6px 12px #e6d192;
 }
+
+.btn_grid2 div svg {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+
 /*---- Burger-menu_gride_4  ----*/
 
 /* Animation_du_burger_menu */
