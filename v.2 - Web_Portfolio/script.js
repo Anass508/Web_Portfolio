@@ -1,5 +1,33 @@
 lucide.createIcons(); /* Pour ma bibliothèque Icon */
 
+/*---------------------- fonction grid_2_  -----------------------*/
+
+let btn_grid_2 = document.getElementsByClassName("btn_grid2")[0].querySelectorAll("div") ; 
+
+
+for (let i=0;i<btn_grid_2.length;i++) {
+
+    btn_grid_2[i].addEventListener('click', function (){
+   
+        let btn_svg = btn_grid_2[i].querySelectorAll("svg"); 
+
+        for (let z=0; z<btn_svg.length ;z++) {
+            
+            if (btn_svg[z].classList.contains("btn_option_desactive") ) {
+                btn_svg[z].classList.remove("btn_option_desactive");
+                btn_svg[z].classList.add("btn_option_active");
+            }
+            else {
+                btn_svg[z].classList.remove("btn_option_active");
+                btn_svg[z].classList.add("btn_option_desactive");
+            }
+        }
+    });
+
+}
+
+
+
 /*---------------------- fonction burger_menu  -----------------------*/
 
 /* Animation du burger-menu */
