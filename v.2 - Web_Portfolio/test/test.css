@@ -1,120 +1,31 @@
-
-/*---------------------------------------*/
-
-:root { /* defini les variables pour la fluidité des effets  */
-    --hoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
-    --returnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+*, *:hover {
+	cursor: none !important;
 }
 
-.container_work {
-    padding: 40px 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+html, body {
+	cursor: none;
 }
 
-.carte-wrap {
-    transform: perspective(800px); /* l 'effet de zoome lors du passage de la souris */
-    transform-style: preserve-3d; /* Donne cette effet de 3d lors de mouvements */
-    cursor: pointer;
+#dot {
+	position: fixed;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 999;
+	transform: translate(-50%, -50%);
+	mix-blend-mode: screen;
+	background: #e86026;
 }
 
-.carte-wrap:hover .carte-info {
-    transform: translateY(0);
-    transition: 0.6s var(--hoverEasing);
-}
-
-.carte-wrap:hover .carte-info p {
-    opacity: 1;
-    transition: 0.6s var(--hoverEasing);
-}
-
-.carte-wrap:hover .carte-info::after {
-    transition: 5s var(--hoverEasing);
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.carte-wrap:hover .carte-bg {
-    transition: 0.6s var(--hoverEasing), opacity 5s var(--hoverEasing);
-    opacity: 0.8;
-}
-
-.carte-wrap:hover .carte {
-    transition: 0.6s var(--hoverEasing), box-shadow 2s var(--hoverEasing);
-    box-shadow:
-        #e6d192 0 0 40px 5px,
-        rgba(255, 255, 255, 1) 0 0 0 1px,
-        #e6d192 0 30px 60px 0,
-        inset #e6d192 0 0 0 5px,
-        inset #ebe6d7 0 0 0 6px;
-}
-
-.carte {
-    position: relative;
-    flex: 0 0 240px;
-    width: 240px;
-    height: 320px;
-    background-color: #333333;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow:
-        #ebe6d7 0 30px 60px 0,
-        inset #333 0 0 0 5px,
-        inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
-    transition: 1s var(--returnEasing);
-}
-
-.carte-bg {
-    opacity: 0.5;
-    position: absolute;
-    top: -20px; left: -20px; /* Pour pas voir les bord de l'image lors des mouvements */
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    transition: 1s var(--returnEasing), opacity 5s 1s var(--returnEasing);
-    pointer-events: none;
-}
-
-.carte-info {
-    padding: 20px;
-    position: absolute;
-    bottom: 0;
-    color: #e6d192;
-    transform: translateY(40%);
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.carte-info p {
-    opacity: 0;
-    text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
-    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.carte-info * {
-    position: relative;
-    z-index: 1;
-}
-
-.carte-info::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-    background-blend-mode: overlay;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: 5s 1s var(--returnEasing);
-}
-
-.carte-info h1 {
-    font-size: 36px;
-    font-weight: 700;
-    text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+#ring {
+	position: fixed;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 998;
+	transform: translate(-50%, -50%);
+	border: 1px solid rgba(232, 96, 38, .6);
+	transition: width 0.3s, height 0.3s, border 0.4s;
 }
