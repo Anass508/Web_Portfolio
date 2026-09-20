@@ -1,5 +1,55 @@
 lucide.createIcons(); /* Pour ma bibliothèque Icon */
 
+/*---------------------- Animation Curseur  -----------------------*/
+
+const dotEl = document.getElementById("dot"),
+	ringEl = document.getElementById("ring");
+let csx = 0, csy = 0, crx = 0, cry = 0;
+
+document.addEventListener("mousemove", (e) => {
+	csx = e.clientX;
+	csy = e.clientY;
+	dotEl.style.left = e.clientX + "px";
+	dotEl.style.top = e.clientY + "px";
+});
+
+(function animateCursor() {
+	crx += (csx - crx) * 0.11;
+	cry += (csy - cry) * 0.11;
+	ringEl.style.left = crx + "px";
+	ringEl.style.top = cry + "px";
+	requestAnimationFrame(animateCursor);
+})();
+
+/* Repère une seule fois, au chargement, tous les éléments qui ont
+   réellement cursor:pointer dans le CSS (avant qu'on les neutralise),
+   puis force leur curseur natif à "none" en inline (donc plus besoin
+   de !important global, qui empêchait toute détection ensuite). */
+function markPointerElements() {
+	document.querySelectorAll("*").forEach((el) => {
+		if (getComputedStyle(el).cursor === "pointer") {
+			el.dataset.customCursor = "pointer";
+			el.style.cursor = "none";
+		}
+	});
+}
+markPointerElements();
+
+document.addEventListener("mouseover", (e) => {
+	if (e.target.closest('[data-custom-cursor="pointer"]')) {
+		ringEl.style.width = "50px";
+		ringEl.style.height = "50px";
+	}
+});
+
+document.addEventListener("mouseout", (e) => {
+	if (e.target.closest('[data-custom-cursor="pointer"]')) {
+		ringEl.style.width = "26px";
+		ringEl.style.height = "26px";
+	}
+});
+
+
 /*---------------------- fonction grid_2_  -----------------------*/
 
 let btn_grid_2 = document.getElementsByClassName("btn_grid2")[0].querySelectorAll("div") ; 
