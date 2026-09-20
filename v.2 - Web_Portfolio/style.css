@@ -697,6 +697,17 @@ nav ul li a:hover::after {
     margin-top: 30px;
 }
 
+.links-contact {
+    text-align: center;
+}
+
+.links-contact p {
+  display: flex;
+  align-items: center; 
+  margin-left: 45% ;
+  text-decoration: none;
+}
+
 .contact-left svg {
     color: #e8c45b ;
     margin-right: 15px ;
@@ -709,23 +720,106 @@ nav ul li a:hover::after {
     background: #e8c45b;
     
 }
-.footer {
-    width: 100%;
-    text-align: center ;
-    padding: 25px 0;
+
+
+/*------------------------  Footer section  ------------------------*/
+
+#footer {
+    padding-top: 25px ;
     background: #e6d192;
-    font-weight: 300;
-    margin-top: 20px;
+    left: 50%;
+}
+
+.gride-line-footer {
+    display: grid; /* Pour dire que c'est une grille */
+    grid-template-columns:0.5sfr 0.5fr ; /* Taille de la grille horizontale */
+    grid-template-rows: auto auto; /* Taille de la grille verticale */
+    min-height: fit-content; /* hauteur égale a la fenetre */
+    width: 100%; /* Prendre tout de la fenetre */
+}
+
+.item1-footer {
+    grid-column-start: 1 ;
+    grid-column-end: 2 ;
+    grid-row-start: 1 ;
+    grid-row-end: 2 ;
+    border: solid;
+}
+
+.item2-footer {
+    grid-column-start: 2 ;
+    grid-column-end: 4 ;
+    grid-row-start: 1 ;
+    grid-row-end: 2 ;
+    border: solid;
+}
+
+.item3-footer {
+    grid-column-start: 1 ;
+    grid-column-end: 4  ;
+    grid-row-start: 2 ;
+    grid-row-end: 3 ;
+    border: solid;
+    border-color: #080707;
+}
+
+/* footer-left */
+
+.logo_footer {
+    display: block ;
+    width: 100% ; /* Pour qu'on puissent la voir en entier*/
+    transform: scale(0.6); /* Pour que l'image sois plus zoomer et plus grand */
+    margin-left: 20%;
+}
+
+.name_footer {
+    position: absolute;
+    left: 65%;
+    top: 43%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.p_footer_left {
+    position: absolute;
+    left: 57%;
+    top: 65%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* footer-right */
+
+.item2-footer h2 {
+    position: absolute;
+    left: 10%;
 }
 
 
-.links-contact {
-    text-align: center;
+.navigation li a {
+    display: inline-block ; /* Pour les mettre sur la meme ligne */
+    list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
 }
 
-.links-contact p {
-  display: flex;
-  align-items: center; 
-  margin-left: 45% ;
-  text-decoration: none;
+.navigation li a  {
+    color: #0d0c08;
+}
+
+/* ::after , sert de pseudo-élément en CSS , permet de faire des élément sans crée de balise spécifique pour chaque options */
+/* Sinon il aurait fallu faire <span class="barre"></span> pour chaque options pour rajouter l'effet de barre en dessous de l'option */
+
+.navigation li a::after { 
+    content: '' ; /* Obligatoire : Sans cette ligne, le ::after n'apparaîtra pas à l'écran */
+    width: 0 ; /* Pour appliquer sur le texte , ici a 0 il est cacher tant que l'on n'a pas mis le curseur dessus   */
+    height: 3px ;
+    background:#ebe6d7 ;
+    position: absolute ; /* Se déplacer par rapport a son parent (parent : "position: relative;" plus haut ) */
+    left: 0 ; /* Pour que la barre commence au debut du mot sans décalage */
+    bottom: -6px ; /* Pour que l'effet commencer un peu plus bas du texte*/
+    transition: 0.5s; 
+}
+
+/* :hover , Pour appliquer l'effet ::after quand l'on passe sa souris dessus */
+.navigation li a:hover::after { 
+    width: 100% ; /* Pour l'afficher */
 }
