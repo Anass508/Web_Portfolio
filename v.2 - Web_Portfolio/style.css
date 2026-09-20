@@ -16,10 +16,14 @@ html {
 body {
     background: #fcfbf8;
     color: #0d0c08; /* couleur du texte */
-
 }
 
-    /* Typographie */   
+html, body {
+	cursor: none;
+}
+
+/* Typographie */   
+
 .parisienne-regular { 
     font-family: "Parisienne", cursive;
     font-weight: 400;
@@ -34,7 +38,28 @@ body {
     font-style: normal;
 }
 
+#dot {
+	position: fixed;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 999;
+	transform: translate(-50%, -50%);
+	background: #0d0c08;
+}
 
+#ring {
+	position: fixed;
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 998;
+	transform: translate(-50%, -50%);
+	border: 2px solid #e8c45b;
+	transition: width 0.3s, height 0.3s, border 0.4s;
+}
 /*------------------------  Header section  ------------------------*/
 
 .gride-line {
@@ -114,12 +139,14 @@ body {
     display: block ;
     width: 100% ; /* Pour qu'on puissent la voir en entier*/
     transform: scale(2); /* Pour que l'image sois plus zoomer et plus grand */
+    margin-top: 20%;
 }
 
 .item1 p {
     text-align: center ; /* aligne le texte et le logo */
     font-size: 20px;
     font-weight: 700;
+    margin-top: -80px;
 }
 
 
@@ -732,7 +759,7 @@ nav ul li a:hover::after {
 
 .gride-line-footer {
     display: grid; /* Pour dire que c'est une grille */
-    grid-template-columns:0.5sfr 0.5fr ; /* Taille de la grille horizontale */
+    grid-template-columns:0.5fr 0.5fr ; /* Taille de la grille horizontale */
     grid-template-rows: auto auto; /* Taille de la grille verticale */
     min-height: fit-content; /* hauteur égale a la fenetre */
     width: 100%; /* Prendre tout de la fenetre */
@@ -744,6 +771,9 @@ nav ul li a:hover::after {
     grid-row-start: 1 ;
     grid-row-end: 2 ;
     border-right: solid;
+    border-top: transparent;
+    border-bottom: transparent;
+    border-style:dashed;
 }
 
 .item2-footer {
@@ -775,15 +805,15 @@ nav ul li a:hover::after {
 .name_footer {
     position: absolute;
     left: 65%;
-    top: 35%;
+    top: 33%;
     font-size: 20px;
     font-weight: 700;
 }
 
 .p_footer_left {
     position: absolute;
-    left: 57%;
-    top: 55%;
+    left: 58%;
+    top: 51%;
     font-size: 20px;
     font-weight: 700;
 }
@@ -791,6 +821,7 @@ nav ul li a:hover::after {
 .mention {
     text-align: center;
     margin-left: 400px;
+    margin-top: 100px;
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
@@ -844,8 +875,9 @@ nav ul li a:hover::after {
 }
 
 .politique {
-    text-align: center;
-    margin-right: 400px;
+    position: absolute;
+    top: 90%;
+    left: 7%;
     font-size: 20px;
     font-weight: 400;
     cursor: pointer;
