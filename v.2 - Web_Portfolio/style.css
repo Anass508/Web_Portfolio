@@ -743,7 +743,7 @@ nav ul li a:hover::after {
     grid-column-end: 2 ;
     grid-row-start: 1 ;
     grid-row-end: 2 ;
-    border: solid;
+    border-right: solid;
 }
 
 .item2-footer {
@@ -751,7 +751,7 @@ nav ul li a:hover::after {
     grid-column-end: 4 ;
     grid-row-start: 1 ;
     grid-row-end: 2 ;
-    border: solid;
+    
 }
 
 .item3-footer {
@@ -759,11 +759,11 @@ nav ul li a:hover::after {
     grid-column-end: 4  ;
     grid-row-start: 2 ;
     grid-row-end: 3 ;
-    border: solid;
+    border-top: solid;
     border-color: #080707;
 }
 
-/* footer-left */
+/*----- footer-left -----*/
 
 .logo_footer {
     display: block ;
@@ -775,7 +775,7 @@ nav ul li a:hover::after {
 .name_footer {
     position: absolute;
     left: 65%;
-    top: 43%;
+    top: 35%;
     font-size: 20px;
     font-weight: 700;
 }
@@ -783,22 +783,41 @@ nav ul li a:hover::after {
 .p_footer_left {
     position: absolute;
     left: 57%;
-    top: 65%;
+    top: 55%;
     font-size: 20px;
     font-weight: 700;
 }
 
-/* footer-right */
-
-.item2-footer h2 {
-    position: absolute;
-    left: 10%;
+.mention {
+    text-align: center;
+    margin-left: 400px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
 }
 
+/*----- footer-right ------*/
+
+.item2-footer h2 {
+    margin-top: 100px ;
+}
+
+.footer_nav{
+    margin: 200px 50px;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+}
 
 .navigation li a {
     display: inline-block ; /* Pour les mettre sur la meme ligne */
     list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
+    margin: 0px 40px;
 }
 
 .navigation li a  {
@@ -822,4 +841,20 @@ nav ul li a:hover::after {
 /* :hover , Pour appliquer l'effet ::after quand l'on passe sa souris dessus */
 .navigation li a:hover::after { 
     width: 100% ; /* Pour l'afficher */
+}
+
+.politique {
+    text-align: center;
+    margin-right: 400px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/*------ item3-footer ------*/
+
+.item3-footer {
+    text-align: center;
+    margin: 15px ; 
+    padding: 10px;
 }
