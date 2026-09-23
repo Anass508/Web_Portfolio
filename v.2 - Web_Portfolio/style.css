@@ -568,6 +568,12 @@ nav ul li a:hover::after {
     margin-left: 70px;
 }
 
+.presentation p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 200;
+}
+
 /*------ about Me col1 -------*/
 
 .presentation {
@@ -631,6 +637,11 @@ nav ul li a:hover::after {
     list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
     margin: 30px 0 ; /* espace entre les options */
 }   
+
+.tab-contents a {
+    color: inherit;
+    text-decoration: none;
+}
 
 .tab-contents ul li span {
     color: #e8c45b ;
@@ -719,6 +730,9 @@ nav ul li a:hover::after {
 
 
 /*------------------------  Contact section  ------------------------*/
+.sub-title_contact{
+    margin-bottom: 60px;
+}
 
 .contact-left p {
     margin-top: 30px;
@@ -728,11 +742,13 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-.links-contact p {
-  display: flex;
-  align-items: center; 
-  margin-left: 45% ;
-  text-decoration: none;
+.links-contact a {
+    display: flex;
+    align-items: center; 
+    margin-left: 45% ;
+    margin-top: 25px;
+    color: inherit;
+    text-decoration: none;
 }
 
 .contact-left svg {
@@ -745,7 +761,8 @@ nav ul li a:hover::after {
 .btn.btn_download {
     display: inline-block;
     background: #e8c45b;
-    
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 
