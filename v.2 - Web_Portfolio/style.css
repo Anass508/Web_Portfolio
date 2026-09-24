@@ -418,6 +418,11 @@ nav ul li a:hover::after {
     margin-left: 35%;
 }
 
+.btn_projet a {
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
 /*----------------- Work List carte ----------------------*/
 
 :root { /* defini les variables pour la fluidité des effets  */
@@ -636,6 +641,9 @@ nav ul li a:hover::after {
 .tab-contents ul li {
     list-style: none ; /* enleve les petit point devant chaque options li - ex : ° Home */
     margin: 30px 0 ; /* espace entre les options */
+    margin-left: 20px;
+    font-size: 17px ;
+    font-weight: 700;
 }   
 
 .tab-contents a {
@@ -645,8 +653,10 @@ nav ul li a:hover::after {
 
 .tab-contents ul li span {
     color: #e8c45b ;
-    font-size: 15px ;
-    font-weight: 600;
+    margin-left: 20px;
+    margin: -20px;
+    font-size: 20px ;
+    font-weight: 700;
 }
 
 .tab-contents {
@@ -667,7 +677,7 @@ nav ul li a:hover::after {
 
 .sub-title3 {
     font-size: 100px;
-    margin-left: 32%;
+    text-align: center;
 }
 
 .color_site {
@@ -734,7 +744,7 @@ nav ul li a:hover::after {
     margin-bottom: 60px;
 }
 
-.contact-left p {
+.contact p {
     margin-top: 30px;
 }
 
@@ -751,20 +761,32 @@ nav ul li a:hover::after {
     text-decoration: none;
 }
 
-.contact-left svg {
+.contact svg {
     color: #e8c45b ;
     margin-right: 15px ;
     font-size: 25px ;
     text-decoration: none;
 }
 
-.btn.btn_download {
-    display: inline-block;
-    background: #e8c45b;
+.btn_download {
+    background: #fcfbf8; 
+    margin-left: 50% ;
     margin-top: 100px;
-    margin-bottom: 60px;
+    transform: translate(-50%, -50%) ;
+    cursor: pointer;
+    width: 200px ;
+    height: 60px ;
+    border-radius: 25px;
+    box-shadow: 6px 6px 12px #e8c45b,-6px -6px 12px #e6d192;
+    transition: background 0.5s;
 }
 
+.btn_download a {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
 
 /*------------------------  Footer section  ------------------------*/
 
