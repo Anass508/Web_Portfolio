@@ -752,11 +752,12 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-.links-contact a {
+.links-contact > a {
     display: flex;
     align-items: center; 
     margin-left: 45% ;
-    margin-top: 25px;
+    margin-top: 40px;
+    font-weight: 600;
     color: inherit;
     text-decoration: none;
 }
@@ -770,15 +771,18 @@ nav ul li a:hover::after {
 
 .btn_download {
     background: #fcfbf8; 
-    margin-left: 50% ;
-    margin-top: 100px;
-    transform: translate(-50%, -50%) ;
+    margin-top: 30px; /* Espace au-dessus du bouton */
     cursor: pointer;
     width: 200px ;
     height: 60px ;
     border-radius: 25px;
     box-shadow: 6px 6px 12px #e8c45b,-6px -6px 12px #e6d192;
     transition: background 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 50px auto; 
 }
 
 .btn_download a {
@@ -787,6 +791,11 @@ nav ul li a:hover::after {
     text-decoration: none;
     color: inherit;
 }
+
+.btn_download:hover {
+    background: #e8c45b;
+}
+
 
 /*------------------------  Footer section  ------------------------*/
 
