@@ -115,7 +115,16 @@ btn_opt.addEventListener('click', function (){
     
 });
 
+/*---------------------- btn-top grid_4  -----------------------*/
+let btn_top = document.getElementsByClassName("btn-top")[0] ;
 
+btn_top.addEventListener('click', function (){
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        
+    });
+});
 
 
 /*----------------------   -----------------------*/
