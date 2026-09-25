@@ -342,6 +342,39 @@ nav ul li a:hover::after {
     transition: 0.5s;
 }
 
+.btn-top {
+    position: fixed;   
+    bottom: 30px;      
+    left: 5%;          
+    transform: translateX(-50%);
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e6d192;
+    box-shadow: 6px 6px 12px #e8c45b, -6px -6px 12px #e6d192;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    z-index: 999;      
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+
+.btn-top:hover {
+    background: #e8c45b;
+    transform: translateX(-50%) scale(1.1);
+}
+
+.btn-top svg {
+    color: #0d0c08;
+    width: 26px;
+    height: 26px;
+}
+
 /*---- Principale_gride_5 ----*/
 
 .title-header_1 {
@@ -577,6 +610,7 @@ nav ul li a:hover::after {
     text-align: center;
     font-size: 14px;
     font-weight: 200;
+    line-height: 35px;
 }
 
 /*------ about Me col1 -------*/
@@ -680,10 +714,6 @@ nav ul li a:hover::after {
     text-align: center;
 }
 
-.color_site {
-    margin: 80px;
-}
-
 .palette-color {
     margin: 0px 400px;
 }
@@ -734,11 +764,10 @@ nav ul li a:hover::after {
     background: #e8c45b;
 }
 
-.typographie {
+.designe div > p {
     margin: 80px;
+
 }
-
-
 /*------------------------  Contact section  ------------------------*/
 .sub-title_contact{
     margin-bottom: 60px;
